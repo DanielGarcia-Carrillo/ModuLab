@@ -19,10 +19,5 @@ def hello_world():
     else:
         return render_template('protocol_form.html')
 
-@app.errorhandler(500)
-def internal_error(error):
-    print error
-    return "500 error"
-
 if __name__ == '__main__':
     app.run()
