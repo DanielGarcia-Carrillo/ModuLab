@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import json
 
 app = Flask(__name__)
@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
-    return json.dumps({'test': 'value'})
-
+    return render_template('protocol_submission.html')
 
 if __name__ == '__main__':
     app.run()

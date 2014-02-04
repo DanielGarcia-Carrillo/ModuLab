@@ -2,12 +2,50 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ModuLab</title>
+  <link rel="stylesheet" href="static/css/normalize.css" type="text/css"/>
+  <link rel="stylesheet" href="static/css/foundation.min.css" type="text/css"/>
+  <script src="static/js/vendor/modernizr.js"></script>
+
   {% block headInfo %}
   {% endblock %}
 </head>
 <body>
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><label class="first">Foundation</label></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </aside>
+        <nav class="tab-bar show-for-small">
+          <a class="menu-icon left-off-canvas-toggle">
+            <span>Modulab</span>
+          </a>
+        </nav>
+
+        <nav class="top-bar hide-for-small" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+              <h1>
+                <a href="/">Modulab</a>
+              </h1>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+    </div>
   {% block content %}
   {% endblock %}
+  <script src="static/js/vendor/jquery.js"></script>
+  <script src="static/js/vendor/fastclick.js"></script>
+  <script src="static/js/foundation.min.js"></script>
+  <script>
+    // Initializes foundation
+    $(document).foundation();
+  </script>
 </body>
 </html>
