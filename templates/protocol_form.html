@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="row">
+  <div class="columns small-8 small-centered">
+    <form method="post" action="/submit_protocol" data-abide>
+      <label for="name">Procedure name</label>
+      <input placeholder="Procedure name" name="name" id="name" type="text" required>
+      <h4>By YOURNAME HERE</h4>
+      <ul class="button-group radius">
+        <!-- TODO: Open modals? -->
+        <!-- TODO: make this text standardized somewhere -->
+        <li><a href="#" data-reveal-id="stdProcModal" class="small button" data-reveal>Add standard procedure</a></li>
+        <li><a href="#" class="small button">Add user procedure</a></li>
+        <li><a href="#" class="small button">Add custom procedure</a></li>
+      </ul>
+
+      <input type="submit" class="button success" value="Submit procedure">
+    </form>
+
+  </div>
+</div>
+
+<!-- Modal for the custom procedures -->
+<div id="stdProcModal" class="reveal-modal" data-reveal>
+  <h2>Search for procedure</h2>
+  <!-- TODO add dropdown or autocomplete -->
+  <div class="row collapse">
+    <div class="small-10 columns">
+      <input type="text" placeholder="Procedure name">
+    </div>
+    <div class="small-2 columns">
+      <a href="#" class="button postfix">Search</a>
+    </div>
+  </div>
+  <!-- TODO put some found procedures in here -->
+  <output>
+    <ul class="procedures-search-results">
+    </ul>
+  </output>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+{% endblock %}
