@@ -8,7 +8,7 @@ db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET'])
 def landing_page():
-    return render_template('base.html')
+    return render_template('frontpage.html')
 
 @app.route('/submit_procedure', methods=['GET', 'POST'])
 def hello_world():
